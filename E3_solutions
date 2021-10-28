@@ -1,0 +1,82 @@
+задание 1
+
+let array=[2, "element", true, 42, 53, null, 4];
+function ElementCheck(){
+  let evenNums = 0;
+  let notEvenNums = 0;
+  let zeroes = 0;
+  let others = 0;
+  for(a=0; a<array.length; a++){
+    if (typeof(array[a])=="number"){
+      if (array[a] == 0){
+        zeroes +=1
+      }else if (array[a]%2 != 0){
+        notEvenNums +=1
+      } else if (array[a]%2 == 0){
+        evenNums +=1
+      }
+    }else{
+      others +=1 
+    }
+    
+};
+  console.log(evenNums, notEvenNums, zeroes, others);
+}
+ElementCheck(array)
+
+
+Задание 2
+
+let a = prompt("Specify a from 0 to 1000")
+let b = 0;
+if (a === 0 || a === 1){
+  alert(a +" specified");
+} else if (a < 0 || a > 1000){
+  alert("Wrong a specified")
+}
+    else {
+      for (d=2; d<10; d+=1){
+        if (a%d === 0){
+          b += 1;
+          if (a<10 && b<=1){
+            alert(a +" является простым числом")
+          } else if (a>=10 && b === 0) {
+              alert(a +" является простым числом")
+            } else {
+                alert(a + " не является простым числом")
+              }
+        }
+      }
+}
+
+
+Задание 3
+
+function firstFunc(first){
+  return function secondFunc(second){
+   return first + second;
+  }
+}
+let sum = firstFunc(3)(25);
+console.log(sum)
+
+
+Задание 4
+
+let a = 1;
+let b = 8;
+let c = setInterval(function(a, b){
+  do{
+    console.log(a+=1);
+  }
+  while(a<b);
+}, 1000, a, b);
+
+
+Задание 5
+
+const exponentFunc = (a, b) => {
+  result = Math.pow(a, b);
+  return result
+}
+console.log(exponentFunc(2, 38))
